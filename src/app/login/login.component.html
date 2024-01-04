@@ -1,0 +1,35 @@
+<div id="mainContainer" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container-fluid d-flex flex-md-row flex-column-reverse" id="container">
+        <div id="leftSide">
+            <form class="d-flex flex-column" id="formContainer" #form="ngForm" (submit)="onSubmit(form)">
+                <p id="loginHeading">Welcome to trade customer onboarding</p>
+                
+                <div class="form-group">
+                    <label for="username" class="txt">Username</label>
+                    <input style="font-size: medium;" data-toggle="tooltip" data-placement="bottom" title="Username must be specified" required type="text" class="form-control" (focus)="usernameFocused = true" (blur) = "usernameFocused = false" name="username" id="username" ngModel #username="ngModel">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="txt">Password</label>
+                    <input data-toggle="tooltip" style="font-size: medium;" data-placement="bottom" title="Password must be of atleast 8 characters with 1 digit, lowercase, uppercase and special character minimum" required type="password" class="form-control" (focus)="passwordFocused = true" (blur)="passwordFocused = false" name="password" id="password" ngModel #password="ngModel" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,}$">
+                </div>
+                
+                <button type="submit" class="btn txt" id="loginBtn" [disabled]="form.invalid">
+                    Login
+                </button>
+                <small class="errortxt" *ngIf="!userExists">Invalid Login</small>
+                <div class="d-flex flex-row justify-content-between">
+                    <small class="form-text text-center">
+                        <a href="#" class="txt" style="font-size: 1rem;" routerLink="/forgotPassword">Forgot password ?</a>
+                    </small>
+                    <small class="form-text text-center">
+                        <a routerLink="register" class="txt" style="font-size: 1rem;cursor: pointer;">Sign Up</a>
+                    </small>
+                </div>
+            </form>
+        </div>
+        <div id="rightSide">
+            <img src="../assets/MBL.png" alt="" id="MBL_logo" />
+        </div>
+    </div>
+</div>

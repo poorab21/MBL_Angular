@@ -1,0 +1,71 @@
+<div id="container" class="d-flex flex-row justify-content-center align-items-center">
+    <div id="formContainer" class="d-flex flex-sm-row flex-column-reverse align-items-center">
+        <form [formGroup]="form" (submit)="onSubmit()" class="d-flex flex-column" id="form">
+            <p class="h5 text-center" id="heading">Registration</p>
+            <div class="form-group">
+                <label for="email" class="txt">Email</label>
+                <input type="email" id="email" (focus)="emailFocused = true" (blur)="emailFocused = false" class="form-control" name="email" formControlName="email" />
+            
+                <div *ngIf="Email.invalid && emailFocused">
+                    <small class="errortxt" *ngIf="Email.errors?.email">Email is Invalid</small>
+                    <small class="errortxt" *ngIf="Email.errors?.required">Email is required</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username"  class="txt">Username</label>
+                <input type="txt" id="username" class="form-control" name="username" (focus)="usernameFocused = true" (blur)="usernameFocused = false" formControlName="username" />
+
+                <div *ngIf="Username.invalid && usernameFocused">
+                    <small class="errortxt" *ngIf="Username.errors?.required">Username is required</small>
+                    <small class="errortxt" *ngIf="Username.errors?.minlength">Username must have atleast 8 characters</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="txt">Phone Number</label>
+                <div class="d-flex flex-row">
+                    <input type="text" id="phone" value="+92" id="phone_code" disabled />
+                    <div class="w-100">
+                        <ejs-maskedtextbox mask="000-0000000" (focus)="phoneFocused = true" (blur)="phoneFocused = false" promptChar="#" id="phoneNumber"  type="text" formControlName="phoneNumber"></ejs-maskedtextbox>
+                    </div>
+                </div>
+
+                <div *ngIf="Phone.invalid && phoneFocused">
+                    <small class="errortxt" *ngIf="Phone.errors?.required">Phone Number is required</small>
+                    <small class="errortxt" *ngIf="Phone.errors?.minlength || Phone.errors?.maxlength">Phone Number must have exactly 11 digits</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password"  class="txt">Password</label>
+                <input type="password" id="password" formControlName="password" (focus)="passwordFocused = true" (blur)="passwordFocused = false" class="form-control" name="password" />
+            
+                <div *ngIf="Password.invalid && passwordFocused">
+                    <small class="errortxt" *ngIf="Password.errors?.required">Password is required</small>
+                    <small class="errortxt" *ngIf="Password.errors?.pattern">Atleast 8 characters, 1 lowercase, uppercase, digit and special character</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirm"  class="txt">Confirm Password</label>
+                <input type="password" id="confirm" formControlName="confirmPassword" (focus)="confirmFocused = true" (blur)="confirmFocused = false" class="form-control" name="confirm" />
+                
+                <div *ngIf="confirmFocused">
+                    <small class="errortxt" *ngIf="ConfirmPassword.errors?.required">Please confirm Password</small>
+                    <small class="errortxt" *ngIf="ConfirmPassword.value != Password.value && ConfirmPassword.value?.length > 0">Both Passwords do not match</small>
+                </div>
+            </div>
+            <button type="submit" class="btn" id="btn" [disabled]="form.invalid || ConfirmPassword.value != Password.value">Sign Up</button>
+            <small class="errortxt" *ngIf="matching_credentials">User with same email, password or phone number already exists</small>
+        </form>
+        <div class="d-flex flex-column align-self-stretch">
+            <div class="text-right" style="flex: 1;">
+                <svg class="txt" id="backBtn" routerLink="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </div>
+            <div id="logoContainer" style="flex:2">
+                <a routerLink="">
+                    <img src="../../assets/MBL.png" id="MBL_logo" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

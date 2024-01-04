@@ -1,0 +1,96 @@
+#container {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url("../../assets/MBL_Office_Faded.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#formContainer {
+    background-color: purple;
+    border-radius: 10px;
+    padding: 1.2em;
+    min-width: 50vw;
+    margin: 3%;
+}
+
+.txt {
+    color: plum;
+    font-weight: bold;
+    font-family: cursive;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+#heading {
+    color: plum;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 1.8rem;
+}
+
+#logoContainer {
+    text-align: center;
+}
+
+#form {
+    flex: 1;
+}
+
+#btn {
+    font-size: 2rem;
+    background-color: rgb(255, 0, 255);
+    color: rgb(58, 24, 58);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#btn:enabled:hover {
+    background-color: black;
+    color: white;
+}
+
+.errortxt {
+    color: red;
+    font-size: 1.2rem;
+    font-family: cursive;
+    margin-top: 5%;
+}
+
+input {
+    font-size: 1.2em;
+}
+
+#phone_code {
+    background-color: white;
+    border-radius: 2px;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 3%;
+    width: 10%;
+}
+
+#phoneNumber {
+    border-radius: 5px;
+    border-color: white;
+    padding: 5px;
+    width: 100%;
+}
+
+#backBtn:hover {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+#backBtn {
+    text-decoration-line: underline;
+    background-color: plum;
+    color: purple;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+#MBL_logo {
+    width: 50%;
+    height: 50%;
+}

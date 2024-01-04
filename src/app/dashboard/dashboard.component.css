@@ -1,0 +1,43 @@
+#container {
+    padding: 3%;
+    background-image: url("../../assets/MBL_Office_Faded.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.headertxt {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header_row_txt {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    color: plum;
+    text-align: center;
+    padding: 1%;
+    font-size: 1.12rem;
+}
+
+.rowtxt {
+    background-color: plum;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: purple;
+}
+
+#tableContainer {
+    min-width: 50vw;
+    max-width: 100vw;
+}
+
+#MBL_logo {
+    min-width: 10vw;
+    min-height: 10vh;
+    max-width: 15vw;
+    max-height: 15vh;
+}

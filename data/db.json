@@ -1,0 +1,19 @@
+{
+  "registration": [
+    {
+      "username": "poorabgangwani",
+      "phone": "03350298574",
+      "email": "poorabgangwani19@gmail.com",
+      "password": "Poorab@123",
+      "token": "cG9vcmFiZ2FuZ3dhbmlwb29yYWJnYW5nd2FuaTE5QGdtYWlsLmNvbQ==",
+      "id": 1
+    },
+    {
+      "username": "inamsaif",
+      "phone": "03991212231",
+      "email": "inamsaif586@gmail.com",
+      "password": "Inam@123",
+      "id": 2
+    }
+  ]
+}
