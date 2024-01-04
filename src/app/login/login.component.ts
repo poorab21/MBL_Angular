@@ -29,11 +29,11 @@ export class LoginComponent {
       );
       
       if(user) {
-        const token = btoa( JSON.stringify({ username : user.username , email : user.email , expiryDate: moment().add(1,"minute") }) );
+        const token = btoa( JSON.stringify({ username : user.username , email : user.email , expiryDate: moment().add(1,"day") }) );
         
         sessionStorage.setItem("token",token);
         form.reset("");
-        this.router.navigateByUrl("/dashboard");
+        this.router.navigateByUrl("/onboarding/dashboard");
       }
       else {
         this.userExists = false;

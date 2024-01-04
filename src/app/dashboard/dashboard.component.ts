@@ -7,9 +7,5 @@ import { users } from '../../../Dummy_data/user';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  userProfiles: Array<any>;
-
-  constructor() {
-    this.userProfiles = users;
-  }
+  
 }

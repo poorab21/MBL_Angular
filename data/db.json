@@ -5,7 +5,6 @@
       "phone": "03350298574",
       "email": "poorabgangwani19@gmail.com",
       "password": "Poorab@123",
-      "token": "cG9vcmFiZ2FuZ3dhbmlwb29yYWJnYW5nd2FuaTE5QGdtYWlsLmNvbQ==",
       "id": 1
     },
     {
@@ -14,6 +13,20 @@
       "email": "inamsaif586@gmail.com",
       "password": "Inam@123",
       "id": 2
+    },
+    {
+      "username": "andysingh",
+      "phone": "03002322323",
+      "email": "Andy@gmail.com",
+      "password": "Andy@123",
+      "id": 3
+    },
+    {
+      "username": "ajaysingh",
+      "phone": "03991217363",
+      "email": "Ajay@gmail.com",
+      "password": "Ajay@123",
+      "id": 4
     }
   ]
 }

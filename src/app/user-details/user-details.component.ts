@@ -1,0 +1,22 @@
+import { Component, OnInit } from '@angular/core';
+import { users } from '../../../Dummy_data/user';
+import { UserService } from '../Services/user.service';
+
+@Component({
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrl: './user-details.component.css'
+})
+export class UserDetailsComponent implements OnInit {
+  userProfiles: Array<any>;
+
+  constructor(private userService: UserService) {
+    this.userProfiles = [];
+  }
+
+  ngOnInit(): void {
+      this.userService.getUserData().subscribe((users: any) => {
+        this.userProfiles = users;
+      });
+  }
+}
