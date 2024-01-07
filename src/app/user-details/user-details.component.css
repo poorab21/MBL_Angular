@@ -3,30 +3,32 @@
     background-image: url("../../assets/MBL_Office_Faded.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .headertxt {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: cursive;
     font-style: italic;
     font-weight: bold;
+    color: black;
+    font-size: 1.5rem;
 }
 
 .header_row_txt {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: cursive;
     font-style: italic;
     font-weight: bold;
     color: plum;
     text-align: center;
-    padding: 1%;
+    padding: 2%;
     font-size: 1.12rem;
 }
 
 .rowtxt {
     background-color: plum;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, cursive;
     color: purple;
 }
 

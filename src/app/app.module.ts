@@ -13,6 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ContactComponent } from './contact/contact.component';
 import { OnboardingComponent } from './onboarding/onboarding.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatIconModule } from "@angular/material/icon";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatButtonModule } from "@angular/material/button";
+import { MatListModule } from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
     FormsModule,
     MaskedTextBoxModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
