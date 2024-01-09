@@ -1,19 +1,22 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar [ngClass]="{ 'toolbar' : true }" color="danger" class="example-toolbar">
-      <img src="../../assets/MBL.png" style="cursor: pointer;" width="50vw" height="50vh" (click)="snav.toggle()" />
+      <mat-icon *ngIf="!opened" style="color: plum; cursor: pointer;"  (click)="onOpenSidebar()">arrow_circle_right</mat-icon>
+      <mat-icon *ngIf="opened" style="color: plum; cursor: pointer;"  (click)="onCloseSidebar()">arrow_circle_left</mat-icon>
+      
+      <img src="../../assets/MBL.png" style="margin-left: 1%;" width="45vw" height="45vh" />
       <h1 class="header">Meezan Trade Onboarding</h1>
 
-      <mat-icon aria-hidden="false" style="cursor: pointer;" aria-label="Log Out" fontIcon="exit_to_app"></mat-icon>
+      <mat-icon aria-hidden="false" style="cursor: pointer;" aria-label="Log Out" fontIcon="exit_to_app" (click)="logOut()"></mat-icon>
   </mat-toolbar>
   <mat-sidenav-container
     class="example-sidenav-container"
     [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
   >
     <mat-sidenav
-      #snav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
+      [opened]="opened"
       [ngClass]="{ navContainer : true }"
     >
       <mat-nav-list>

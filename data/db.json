@@ -27,6 +27,27 @@
       "email": "Ajay@gmail.com",
       "password": "Ajay@123",
       "id": 4
+    },
+    {
+      "username": "amycooper",
+      "phone": "03001223212",
+      "email": "amy@gmail.com",
+      "password": "Amy@1234",
+      "id": 5
+    },
+    {
+      "username": "ali.khan",
+      "phone": "03328979078",
+      "email": "ali.khan@gmail.com",
+      "password": "Ali@1234",
+      "id": 6
+    },
+    {
+      "username": "rohit.singh",
+      "phone": "03001234421",
+      "email": "rohit@gmail.com",
+      "password": "Rohit@123",
+      "id": 7
     }
   ]
 }

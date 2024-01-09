@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-onboarding',
@@ -8,9 +9,10 @@ import {MediaMatcher} from '@angular/cdk/layout';
 })
 export class OnboardingComponent {
   mobileQuery: MediaQueryList;
+  opened: boolean;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
-
+  
   fillerContent = Array.from(
     {length: 50},
     () =>
@@ -23,10 +25,23 @@ export class OnboardingComponent {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private authService: AuthService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.opened = true;
+  }
+
+  onOpenSidebar() {
+    this.opened = true;
+  }
+
+  onCloseSidebar() {
+    this.opened = false;
+  }
+
+  logOut() {
+    this.authService.logOut();
   }
 
   ngOnDestroy(): void {
