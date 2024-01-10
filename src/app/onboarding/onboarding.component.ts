@@ -32,12 +32,8 @@ export class OnboardingComponent {
     this.opened = true;
   }
 
-  onOpenSidebar() {
-    this.opened = true;
-  }
-
-  onCloseSidebar() {
-    this.opened = false;
+  navToggle() {
+    this.opened = !this.opened;
   }
 
   logOut() {

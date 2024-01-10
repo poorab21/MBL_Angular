@@ -1,7 +1,6 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
     <mat-toolbar [ngClass]="{ 'toolbar' : true }" color="danger" class="example-toolbar">
-      <mat-icon *ngIf="!opened" style="color: plum; cursor: pointer;"  (click)="onOpenSidebar()">arrow_circle_right</mat-icon>
-      <mat-icon *ngIf="opened" style="color: plum; cursor: pointer;"  (click)="onCloseSidebar()">arrow_circle_left</mat-icon>
+      <mat-icon style="color: plum; cursor: pointer;"  (click)="navToggle()">menu</mat-icon>
       
       <img src="../../assets/MBL.png" style="margin-left: 1%;" width="45vw" height="45vh" />
       <h1 class="header">Meezan Trade Onboarding</h1>

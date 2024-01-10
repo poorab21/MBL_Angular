@@ -19,6 +19,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { MatListModule } from "@angular/material/list";
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
