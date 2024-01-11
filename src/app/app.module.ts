@@ -20,7 +20,11 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-
+import { ProductComponent } from './product/product.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { AddProductComponent } from './add-product/add-product.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     NewPasswordComponent,
     UserDetailsComponent,
     ContactComponent,
-    OnboardingComponent
+    OnboardingComponent,
+    ProductComponent,
+    ProductListComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +54,9 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

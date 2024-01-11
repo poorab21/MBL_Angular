@@ -1,0 +1,48 @@
+#heading {
+    font-size: 2rem;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    margin-top: 2%;
+    text-decoration-line: underline;
+}
+
+.txt {
+    font-weight: bold;
+    color: plum;
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+#formContainer {
+    background-color: purple;
+    padding: 1.5rem;
+    margin-top: 1%;
+}
+
+.errortxt {
+    color: red;
+    font-size: 1.1rem;
+    font-family: cursive;
+}
+
+#dropdown {
+    color: black;
+    cursor: pointer;
+}
+
+#submitBtn {
+    background-color: plum;
+    color: purple;
+}
+
+#submitBtn:enabled:hover {
+    background-color: black;
+    color: white;
+}
+
+@media screen and (min-width: 576px) {
+    #formContainer {
+        width: 50%;
+    }
+}

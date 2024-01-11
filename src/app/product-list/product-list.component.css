@@ -1,5 +1,4 @@
 #container {
-    padding: 3%;
     background-image: url("../../assets/MBL_Office_Faded.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,14 +6,20 @@
     min-height: 100%;
 }
 
-.headertxt {
-    font-family: cursive;
-    font-style: italic;
-    font-weight: bold;
-    color: black;
-    font-size: 1.5rem;
-    text-align: center;
+#heading {
+    font-size: 1rem;
+    padding: 1%;
 }
+
+#headingTxt {
+    font-size: 2rem;
+    font-family: cursive;
+    color: black;
+    text-decoration-line: underline;
+    font-weight: bold;
+    flex: 1;
+}
+
 
 .header_row_txt {
     font-family: cursive;
@@ -36,11 +41,25 @@
 #tableContainer {
     min-width: 50vw;
     max-width: 100vw;
+    margin: 1%;
 }
 
-#MBL_logo {
-    min-width: 10vw;
-    min-height: 10vh;
-    max-width: 15vw;
-    max-height: 15vh;
+@media screen and (max-width: 574px) {
+    #table {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 575px) {
+    #table {
+        width: 80%;
+        height: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #headingTxt {
+        text-align: center;
+    }
 }

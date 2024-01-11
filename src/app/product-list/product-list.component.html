@@ -1,0 +1,29 @@
+<div class="container-fluid d-flex flex-column h-100" id="container">
+    <div id="heading" class="d-flex flex-row" style="margin-top: 1%; margin-bottom: 1%;">
+        <h5 id="headingTxt" class="align-self-center text-md-center">Product List</h5>
+        <button mat-raised-button color="primary" routerLink="../create" style="font-size: 1rem;">Add Product</button>
+    </div>
+
+    <div class="table-responsive-xs" id="tableContainer">    
+        <table class="table table-borderless" id="table">
+            <thead>
+                <tr style="background-color: purple;">
+                    <th scope="col" class="header_row_txt">Pid</th>
+                    <th scope="col" class="header_row_txt">Name</th>
+                    <th scope="col" class="header_row_txt">Price</th>
+                    <th scope="col" class="header_row_txt">Unit</th>
+                    <th scope="col" class="header_row_txt">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rowtxt" *ngFor="let product of products ; let i = index">
+                    <th scope="row">{{ product.id }}</th>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }} PKR</td>
+                    <td>{{ product.unit }}</td>
+                    <td style="width: 40vw;">{{ product.details }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

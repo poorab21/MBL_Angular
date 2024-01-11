@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { AuthService } from '../Services/auth.service';
+import { sidenavItems } from '../../assets/data/sidenavItems';
 
 @Component({
   selector: 'app-onboarding',
@@ -10,6 +11,7 @@ import { AuthService } from '../Services/auth.service';
 export class OnboardingComponent {
   mobileQuery: MediaQueryList;
   opened: boolean;
+  sidenavItems: any;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   
@@ -30,6 +32,7 @@ export class OnboardingComponent {
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
     this.opened = true;
+    this.sidenavItems = sidenavItems;
   }
 
   navToggle() {

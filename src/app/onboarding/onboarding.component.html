@@ -19,19 +19,9 @@
       [ngClass]="{ navContainer : true }"
     >
       <mat-nav-list>
-        <div mat-list-item class="d-flex flex-column flex-md-row align-items-center" [ngClass]="{ navListItemContainer : true }" routerLink="dashboard">
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
-          <h5 class="navListItem">Dashboard</h5>
-        </div>
-
-        <div class="d-flex flex-row flex-column flex-md-row align-items-center" [ngClass]="{ navListItemContainer : true }" routerLink="userDetails">
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="perm_identity"></mat-icon>
-          <h5 class="navListItem">User details</h5>
-        </div>
-
-        <div class="d-flex flex-row flex-column flex-md-row align-items-center" [ngClass]="{ navListItemContainer : true }" routerLink="contact">
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="contact_support"></mat-icon>
-          <h5 class="navListItem">Contact</h5>
+        <div *ngFor="let item of sidenavItems" mat-list-item class="d-flex flex-column flex-md-row align-items-center" [ngClass]="{ navListItemContainer : true }" [routerLink]="item.pageLink">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="{{ item['icon'] }}"></mat-icon>
+          <h5 class="navListItem">{{ item["title"] }}</h5>
         </div>
       </mat-nav-list>
     </mat-sidenav>

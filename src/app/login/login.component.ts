@@ -33,7 +33,7 @@ export class LoginComponent {
         
         sessionStorage.setItem("token",token);
         form.reset("");
-        this.router.navigateByUrl("/onboarding/dashboard");
+        this.router.navigateByUrl("/onboarding");
       }
       else {
         this.userExists = false;
