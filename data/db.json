@@ -48,6 +48,20 @@
       "email": "rohit@gmail.com",
       "password": "Rohit@123",
       "id": 7
+    },
+    {
+      "username": "devildiv",
+      "phone": "03887348738",
+      "email": "Devil@gmail.com",
+      "password": "Devil@123",
+      "id": 8
+    },
+    {
+      "username": "robinsingh",
+      "phone": "03001283738",
+      "email": "RoundRobin@gmail.com",
+      "password": "Robin@123",
+      "id": 9
     }
   ],
   "product": [
@@ -106,6 +120,20 @@
       "unit": "Mili litre",
       "details": "No Details",
       "id": 8
+    },
+    {
+      "name": "MBL Holiday Card",
+      "price": 11290,
+      "unit": "Kilogram",
+      "details": "No Details",
+      "id": 9
+    },
+    {
+      "name": "MBL Developer Card",
+      "price": 10000,
+      "unit": "Litre",
+      "details": "A Specially-made card for MBL developers",
+      "id": 10
     }
   ]
 }

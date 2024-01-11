@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../Services/user.service';
 import moment from 'moment';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent {
   userExists: boolean;
   getUserObserve: any;
 
-  constructor( private router: Router,private userService: UserService ) {
+  constructor( private toastr: ToastrService , private router: Router,private userService: UserService ) {
     this.usernameFocused = false;
     this.passwordFocused = false;
     this.userExists = true;
@@ -33,9 +34,11 @@ export class LoginComponent {
         
         sessionStorage.setItem("token",token);
         form.reset("");
+        this.toastr.success("You have successfully logged in");
         this.router.navigateByUrl("/onboarding");
       }
       else {
+        this.toastr.error("You have submitted invalid credentials");
         this.userExists = false;
       }
 

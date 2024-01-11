@@ -40,7 +40,7 @@ export class OnboardingComponent {
   }
 
   logOut() {
-    this.authService.logOut();
+    this.authService.logOut("You have been successfully logged out");
   }
 
   ngOnDestroy(): void {

@@ -25,6 +25,8 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { AddProductComponent } from './add-product/add-product.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,11 @@ import { MatSelectModule } from '@angular/material/select';
     MatListModule,
     CanvasJSAngularChartsModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    CommonModule,
+    ToastrModule.forRoot({
+      positionClass :'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

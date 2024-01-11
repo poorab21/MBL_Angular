@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { specialPasswordValidation } from '../../validators/specialPassword.validator';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-new-password',
@@ -13,7 +14,7 @@ export class NewPasswordComponent {
   passwordFocused: boolean;
   confirmFocused: boolean;
 
-  constructor( fb : FormBuilder , private router : Router ) {
+  constructor(private toastrService: ToastrService , fb : FormBuilder , private router : Router ) {
     this.form = fb.group({
       password: ["",[
         Validators.required ,
@@ -35,6 +36,7 @@ export class NewPasswordComponent {
   }
 
   formSubmitted() {
+    this.toastrService.success("Your Password has been successfully reset");
     this.router.navigateByUrl("/");    
   }
 }

@@ -1,7 +1,8 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder , Validators } from '@angular/forms';
 import { UserService } from '../Services/user.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,7 @@ export class RegisterComponent {
   addUserObserve: any;
   getUserObserve: any;
 
-  constructor( fb : FormBuilder , private userService: UserService , private router: Router ) {
+  constructor(private toastrService: ToastrService , fb : FormBuilder , private userService: UserService , private router: Router ) {
     this.form = fb.group({
       email: [
         "",
@@ -116,7 +117,7 @@ export class RegisterComponent {
       }).subscribe((response)=> {
         this.matching_credentials = false;
         this.form.reset("");
-
+        this.toastrService.success("You have been successfully registered");
         this.router.navigateByUrl("");
       },(error) => {
         console.log(error);

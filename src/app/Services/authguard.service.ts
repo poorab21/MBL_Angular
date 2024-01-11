@@ -14,7 +14,7 @@ export class AuthguardService implements CanActivate {
       const token = sessionStorage.getItem("token");
 
       if(token) {
-        this.authService.hasTokenExpired(token) ? this.authService.logOut() : null;
+        this.authService.hasTokenExpired(token) ? this.authService.logOut("Your session has expired") : null;
       }
       else {
         this.router.navigateByUrl("");

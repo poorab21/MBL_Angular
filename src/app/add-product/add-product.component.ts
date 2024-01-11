@@ -4,6 +4,7 @@ import { units } from '../../assets/data/productUnits';
 import { ProductService } from '../Services/product.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-add-product',
@@ -17,7 +18,7 @@ export class AddProductComponent {
   productUnits: any;
   prodDetailsFocused: boolean;
   
-  constructor( private route: ActivatedRoute , private router: Router , private productService: ProductService , private fb: FormBuilder ) {
+  constructor(private toastrService: ToastrService, private route: ActivatedRoute , private router: Router , private productService: ProductService , private fb: FormBuilder ) {
     this.form = fb.group({
       name: [
         "",
@@ -73,7 +74,10 @@ export class AddProductComponent {
   onSubmit() {
     this.productService.addProduct(this.form.value).subscribe((response) => {
       this.form.reset("");
+      this.toastrService.success("Product Successfully added to Products List");
       this.router.navigate(['../list'],{ relativeTo: this.route });
+    }, (error) => {
+      console.log(error);
     });
   }
 }
