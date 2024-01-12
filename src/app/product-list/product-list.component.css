@@ -31,6 +31,11 @@
     font-size: 1.12rem;
 }
 
+#addProductBtn {
+    font-size: 1rem;
+    font-family: cursive;
+}
+
 .rowtxt {
     background-color: plum;
     text-align: center;
