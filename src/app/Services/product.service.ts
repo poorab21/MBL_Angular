@@ -18,4 +18,18 @@ export class ProductService {
   addProduct(productDetails: product) {
     return this.http.post<product>(`${environment.baseUrl}${routes.product}`,productDetails);
   }
+
+  deleteProduct( id: number ) {
+    return this.http.delete(`${environment.baseUrl}${routes.product}/${id}`);
+  }
+
+  editProduct( id: number , product: product ) {
+    return this.http.put(`${environment.baseUrl}${routes.product}/${id}`,{
+      ...product
+    });
+  }
+
+  getProduct( id: number ) {
+    return this.http.get<product>(`${environment.baseUrl}${routes.product}/${id}`);
+  }
 }

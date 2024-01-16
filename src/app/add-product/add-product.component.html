@@ -1,6 +1,6 @@
 <div class="container-fluid border h-100">
     <div class="row">
-        <h3 class="col-12 text-center" id="heading">Add Product</h3>
+        <h3 class="col-12 text-center" id="heading">{{ mode == 'edit' ? "Edit Product" : "Create Product" }}</h3>
     </div>
     <div class="container border" id="formContainer">
         <form [formGroup]="form" class="d-flex flex-column" (ngSubmit)="onSubmit()">
@@ -37,7 +37,9 @@
                 <small *ngIf="prodDetailsFocused && ( Details.errors?.required || Details.errors?.pattern)" class="errortxt">Product Details must be Submitted</small>
             </div>
 
-            <button type="submit" class="btn txt" id="submitBtn" [disabled]="form.invalid">Add</button>
+            <button type="submit" class="btn txt" id="submitBtn" [disabled]="form.invalid">
+                {{ mode == 'edit' ? 'Edit' : 'Create' }}
+            </button>
         </form>
     </div>
 </div>

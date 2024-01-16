@@ -21,9 +21,16 @@ export class AuthService {
     return false;
   }
 
-  logOut( msg: string ) {
+  logOut( msg: string , logoutType: string ) {
     sessionStorage.removeItem("token");
-    this.toastrService.success(msg);
+    
+    if(logoutType == 'sign out') {
+      this.toastrService.success(msg);
+    }
+    else if(logoutType == 'expired') {
+      this.toastrService.warning(msg);
+    }
+
     this.router.navigateByUrl("");
   }
 }

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../Services/user.service';
 import moment from 'moment';
 import { ToastrService } from 'ngx-toastr';
+import { constants } from '../../assets/constant/constant';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,7 @@ export class LoginComponent {
         
         sessionStorage.setItem("token",token);
         form.reset("");
-        this.toastr.success("You have successfully logged in");
+        this.toastr.success(constants.toastrLoginMsg);
         this.router.navigateByUrl("/onboarding");
       }
       else {

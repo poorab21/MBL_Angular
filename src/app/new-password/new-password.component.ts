@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { specialPasswordValidation } from '../../validators/specialPassword.validator';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { constants } from '../../assets/constant/constant';
 
 @Component({
   selector: 'app-new-password',
@@ -36,7 +37,7 @@ export class NewPasswordComponent {
   }
 
   formSubmitted() {
-    this.toastrService.success("Your Password has been successfully reset");
+    this.toastrService.success(constants.toastrResetPassMsg);
     this.router.navigateByUrl("/");    
   }
 }

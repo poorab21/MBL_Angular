@@ -66,74 +66,11 @@
   ],
   "product": [
     {
-      "id": 1,
-      "name": "Meezan Debit Card",
-      "price": 12000,
+      "name": "kjdjd",
+      "price": 828,
       "unit": "Kilogram",
-      "details": "Meezan Bank Debit Card customers can now simply ' Tap and Pay ' at payment counters of all NFC enabled merchants across the globe along with additional security of EMV or chip card technology."
-    },
-    {
-      "id": 2,
-      "name": "Meezan Staff App",
-      "price": 13000,
-      "unit": "Gram",
-      "details": "Efficiently handle your finances on-the-go and at any time using Meezan Bank's secure Mobile Banking App. Loaded with intelligent functionalities, Meezan's Mobile App offers secure and convenient access to your accounts, equipped with robust and user-friendly tools for their management."
-    },
-    {
-      "id": 3,
-      "name": "Meezan Shuttle",
-      "price": 3300,
-      "unit": "Gram",
-      "details": "Access our cheap and state-of-the-art transport service to relieve yourself from the burden of costly personal transport"
-    },
-    {
-      "name": "Meezan Vacation Card",
-      "price": 12500,
-      "unit": "Kilogram",
-      "details": "Using the new MBL Vacation Card, you can plan and pay for your trips by availing various payment methods.",
-      "id": 4
-    },
-    {
-      "name": "MBL Digital Debit",
-      "price": 11000,
-      "unit": "Kilogram",
-      "details": "No Details",
-      "id": 5
-    },
-    {
-      "name": "MBL Asaan Account",
-      "price": 14000,
-      "unit": "Kilogram",
-      "details": "No Details",
-      "id": 6
-    },
-    {
-      "name": "MBL Friendship Card",
-      "price": 12000,
-      "unit": "Kilogram",
-      "details": "No Details",
-      "id": 7
-    },
-    {
-      "name": "MBL Marriage Card",
-      "price": 27000,
-      "unit": "Mili litre",
-      "details": "No Details",
-      "id": 8
-    },
-    {
-      "name": "MBL Holiday Card",
-      "price": 11290,
-      "unit": "Kilogram",
-      "details": "No Details",
-      "id": 9
-    },
-    {
-      "name": "MBL Developer Card",
-      "price": 10000,
-      "unit": "Litre",
-      "details": "A Specially-made card for MBL developers",
-      "id": 10
+      "details": "je",
+      "id": 1
     }
   ]
 }

@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { AuthService } from '../Services/auth.service';
 import { sidenavItems } from '../../assets/data/sidenavItems';
+import { constants } from '../../assets/constant/constant';
 
 @Component({
   selector: 'app-onboarding',
@@ -40,7 +41,7 @@ export class OnboardingComponent {
   }
 
   logOut() {
-    this.authService.logOut("You have been successfully logged out");
+    this.authService.logOut(constants.toastrLogoutMsg,'sign out');
   }
 
   ngOnDestroy(): void {

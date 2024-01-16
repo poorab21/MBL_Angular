@@ -26,7 +26,8 @@ const routes: Routes = [
     { path: "product" , component: ProductComponent , children: [
       { path: "" , redirectTo: "list" , pathMatch: "full" }, 
       { path: "list" , component: ProductListComponent , canActivate: [AuthguardService] },
-      { path: "create" , component: AddProductComponent , canActivate: [AuthguardService] }
+      { path: "create" , component: AddProductComponent , canActivate: [AuthguardService] },
+      { path: "edit/:id" , component: AddProductComponent , canActivate: [AuthguardService] }
     ]}
   ] },
 ];

@@ -5,6 +5,7 @@ import { ProductService } from '../Services/product.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { constants } from '../../assets/constant/constant';
 
 @Component({
   selector: 'app-add-product',
@@ -13,12 +14,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AddProductComponent {
   form: any;
+  mode: any;
   prodNameFocused: boolean;
   prodPriceFocused: boolean;
   productUnits: any;
   prodDetailsFocused: boolean;
   
   constructor(private toastrService: ToastrService, private route: ActivatedRoute , private router: Router , private productService: ProductService , private fb: FormBuilder ) {
+    
     this.form = fb.group({
       name: [
         "",
@@ -27,7 +30,7 @@ export class AddProductComponent {
         ]
       ],
       price: [
-        100,
+        "",
         [
           Validators.required ,
           Validators.min(100) ,
@@ -35,7 +38,7 @@ export class AddProductComponent {
         ]
       ],
       unit: [
-        "Kilogram",
+        "Kilogram" ,
         [
           Validators.required
         ]
@@ -53,6 +56,21 @@ export class AddProductComponent {
     this.prodPriceFocused = false;
     this.productUnits = units;
     this.prodDetailsFocused = false;
+    this.mode = 'create';
+
+    if(router.url.includes("edit")) {
+      const prodId = this.route.snapshot.params['id'];
+      this.mode = 'edit';
+
+      this.productService.getProduct(prodId).subscribe((data) => {
+        this.form.patchValue({
+          name: data.name ,
+          price: data.price ,
+          unit: data.unit ,
+          details: data.details
+        })
+      })
+    } 
   }
 
   get Name() {
@@ -72,12 +90,26 @@ export class AddProductComponent {
   }
 
   onSubmit() {
-    this.productService.addProduct(this.form.value).subscribe((response) => {
-      this.form.reset("");
-      this.toastrService.success("Product Successfully added to Products List");
-      this.router.navigate(['../list'],{ relativeTo: this.route });
-    }, (error) => {
-      console.log(error);
-    });
+    if( this.mode == 'create' ) {
+      this.productService.addProduct(this.form.value).subscribe((success) => {
+        console.log(success);
+
+        this.form.reset("");
+        this.toastrService.success(constants.toastrAddProductMsg);
+        this.router.navigate(['../list'],{ relativeTo: this.route });
+      }, (error) => {
+        console.log(error);
+      });
+    }
+    else {
+      this.productService.editProduct( this.route.snapshot.params['id'] , this.form.value ).subscribe((success) => {
+        console.log(success);
+
+        this.toastrService.success(constants.toastrEditProductMsg);
+        this.router.navigate([ '../../list' ] , { relativeTo: this.route } );
+      }, (error) => {
+        console.log(error);
+      });
+    }
   }
 }
