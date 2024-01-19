@@ -5,7 +5,7 @@
     </div>
 
     <div class="table-responsive" id="tableContainer">    
-        <table class="table" id="table">
+        <table class="table table-bordered" id="table">
             <thead>
                 <tr style="background-color: purple;">
                     <th scope="col" class="header_row_txt">Pid</th>
@@ -23,7 +23,7 @@
                     <td>{{ product.price }} PKR</td>
                     <td>{{ product.unit }}</td>
                     <td style="width: 40vw;">{{ product.details }}</td>
-                    <td class="d-flex flex-row justify-content-center">
+                    <td class="d-flex flex-row justify-content-center h-100 align-items-center">
                         <button class="btn btn-primary" (click)="editProduct(product.id)">Edit</button>
                         <button class="btn btn-danger mx-2" (click)="deleteProduct(product.id)">Delete</button>
                     </td>

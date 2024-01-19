@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../Services/product.service';
+import { ProductService } from '../../Services/product.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { constants } from '../../assets/constant/constant';
+import { constants } from '../../../assets/constant/constant';
 
 @Component({
   selector: 'app-product-list',

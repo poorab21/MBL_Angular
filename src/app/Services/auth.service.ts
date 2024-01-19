@@ -28,7 +28,7 @@ export class AuthService {
       this.toastrService.success(msg);
     }
     else if(logoutType == 'expired') {
-      this.toastrService.warning(msg);
+      this.toastrService.error(msg);
     }
 
     this.router.navigateByUrl("");

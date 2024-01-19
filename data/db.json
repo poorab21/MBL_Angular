@@ -64,13 +64,5 @@
       "id": 9
     }
   ],
-  "product": [
-    {
-      "name": "kjdjd",
-      "price": 828,
-      "unit": "Kilogram",
-      "details": "je",
-      "id": 1
-    }
-  ]
+  "product": []
 }

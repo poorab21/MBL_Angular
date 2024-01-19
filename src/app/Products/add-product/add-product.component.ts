@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { units } from '../../assets/data/productUnits';
-import { ProductService } from '../Services/product.service';
+import { units } from '../../../assets/data/productUnits';
+import { ProductService } from '../../Services/product.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { constants } from '../../assets/constant/constant';
+import { constants } from '../../../assets/constant/constant';
 
 @Component({
   selector: 'app-add-product',

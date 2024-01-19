@@ -9,9 +9,9 @@ import { AuthguardService } from './Services/authguard.service';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { ProductComponent } from './product/product.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { AddProductComponent } from './add-product/add-product.component';
+import { ProductComponent } from './Products/product/product.component';
+import { ProductListComponent } from './Products/product-list/product-list.component';
+import { AddProductComponent } from './Products/add-product/add-product.component';
 
 const routes: Routes = [
   { path : "" , component: LoginComponent } ,

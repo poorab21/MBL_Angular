@@ -1,5 +1,5 @@
 #container {
-    background-image: url("../../assets/MBL_Office_Faded.jpg");
+    background-image: url("../../../assets/MBL_Office_Faded.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     min-width: 100%;
@@ -27,8 +27,6 @@
     font-style: italic;
     font-weight: bold;
     color: plum;
-    text-align: center;
-    padding: 2%;
     font-size: 1.12rem;
 }
 
@@ -39,7 +37,6 @@
 
 .rowtxt {
     background-color: plum;
-    text-align: center;
     font-family: Georgia, cursive;
     color: purple;
 }
