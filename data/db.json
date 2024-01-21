@@ -99,6 +99,13 @@
       "unit": "Kilogram",
       "details": "testing",
       "id": 1
+    },
+    {
+      "name": "MBL Executive Card",
+      "price": 15000,
+      "unit": "Gram",
+      "details": "Exclusive MBL Card for Top level Executives of Meezan Bank",
+      "id": 2
     }
   ]
 }

@@ -70,7 +70,7 @@ export class AddProductComponent {
           unit: data.unit ,
           details: data.details
         })
-      })
+      },(error) => console.log(error));
     } 
   }
 
