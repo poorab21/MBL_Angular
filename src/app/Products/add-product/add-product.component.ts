@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
-import { units } from '../../../assets/data/productUnits';
-import { ProductService } from '../../Services/product.service';
-import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { ProductService } from '../../../assets/Services/product.service';
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { units } from '../../../assets/data/productUnits';
 import { constants } from '../../../assets/constant/constant';
 
 @Component({

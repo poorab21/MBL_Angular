@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../Services/user.service';
+import { UserService } from '../../assets/Services/user.service';
 import moment from 'moment';
 import { ToastrService } from 'ngx-toastr';
 import { constants } from '../../assets/constant/constant';

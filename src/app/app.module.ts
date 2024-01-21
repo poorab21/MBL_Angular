@@ -20,13 +20,11 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from "@angular/material/list";
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { ProductComponent } from './Products/product/product.component';
-import { ProductListComponent } from './Products/product-list/product-list.component';
 import { MatTableModule } from '@angular/material/table';
-import { AddProductComponent } from './Products/add-product/add-product.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -38,10 +36,7 @@ import { CommonModule } from '@angular/common';
     NewPasswordComponent,
     UserDetailsComponent,
     ContactComponent,
-    OnboardingComponent,
-    ProductComponent,
-    ProductListComponent,
-    AddProductComponent
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +55,7 @@ import { CommonModule } from '@angular/common';
     MatTableModule,
     MatSelectModule,
     CommonModule,
+    ProductsModule,
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
     })

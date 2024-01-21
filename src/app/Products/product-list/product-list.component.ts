@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../Services/product.service';
+import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
+import { ProductService } from '../../../assets/Services/product.service';
 import { constants } from '../../../assets/constant/constant';
 
 @Component({
@@ -10,7 +10,7 @@ import { constants } from '../../../assets/constant/constant';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
   products: any[];
 
   constructor( private toastrService: ToastrService , private route: ActivatedRoute , private router: Router , private productService: ProductService ) {

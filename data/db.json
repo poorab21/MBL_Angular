@@ -62,7 +62,43 @@
       "email": "RoundRobin@gmail.com",
       "password": "Robin@123",
       "id": 9
+    },
+    {
+      "username": "abc singh",
+      "phone": "09090909090",
+      "email": "abc@gmail.com",
+      "password": "Abc@1234",
+      "id": 10
+    },
+    {
+      "username": "toy maker",
+      "phone": "02312313123",
+      "email": "Toy@gmail.com",
+      "password": "Toy@1234",
+      "id": 11
+    },
+    {
+      "username": "rock ronald",
+      "phone": "00595830498",
+      "email": "Rocky@gmail.com",
+      "password": "Rocky@123",
+      "id": 12
+    },
+    {
+      "username": "rubin singh",
+      "phone": "09837289378",
+      "email": "Rubin@gmail.com",
+      "password": "Rubin@123",
+      "id": 13
     }
   ],
-  "product": []
+  "product": [
+    {
+      "name": "test",
+      "price": 12223,
+      "unit": "Kilogram",
+      "details": "testing",
+      "id": 1
+    }
+  ]
 }

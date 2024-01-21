@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
-import { AuthService } from '../Services/auth.service';
+import { AuthService } from '../../assets/Services/auth.service';
 import { sidenavItems } from '../../assets/data/sidenavItems';
 import { constants } from '../../assets/constant/constant';
 

@@ -5,13 +5,11 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { NewPasswordComponent } from './new-password/new-password.component';
-import { AuthguardService } from './Services/authguard.service';
+import { AuthguardService } from '../assets/Services/authguard.service';
 import { OnboardingComponent } from './onboarding/onboarding.component';
 import { ContactComponent } from './contact/contact.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { ProductComponent } from './Products/product/product.component';
-import { ProductListComponent } from './Products/product-list/product-list.component';
-import { AddProductComponent } from './Products/add-product/add-product.component';
+import { ProductsModule } from './products/products.module';
 
 const routes: Routes = [
   { path : "" , component: LoginComponent } ,
@@ -23,17 +21,12 @@ const routes: Routes = [
     { path: "dashboard" , component: DashboardComponent , canActivate: [AuthguardService] },
     { path: "contact" , component: ContactComponent , canActivate: [AuthguardService] },
     { path: "userDetails" , component: UserDetailsComponent , canActivate: [AuthguardService] },
-    { path: "product" , component: ProductComponent , children: [
-      { path: "" , redirectTo: "list" , pathMatch: "full" }, 
-      { path: "list" , component: ProductListComponent , canActivate: [AuthguardService] },
-      { path: "create" , component: AddProductComponent , canActivate: [AuthguardService] },
-      { path: "edit/:id" , component: AddProductComponent , canActivate: [AuthguardService] }
-    ]}
+    { path: "product" , loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) }
   ] },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes) , ProductsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
