@@ -12,7 +12,7 @@ export class ProductService {
   constructor( private http: HttpClient ) {}
 
   getProducts() {
-    return this.http.get<product[]>(`${environment.baseUrl}${routes.product}`);
+    return this.http.get(`${environment.baseUrl}${routes.product}`);
   }
 
   addProduct(productDetails: product) {
@@ -30,6 +30,6 @@ export class ProductService {
   }
 
   getProduct( id: number ) {
-    return this.http.get<product>(`${environment.baseUrl}${routes.product}/${id}`);
+    return this.http.get(`${environment.baseUrl}${routes.product}/${id}`);
   }
 }

@@ -25,6 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { ProductsModule } from './products/products.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductsModule } from './products/products.module';
     NewPasswordComponent,
     UserDetailsComponent,
     ContactComponent,
-    OnboardingComponent
+    OnboardingComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,10 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { AuthguardService } from '../../assets/Services/authguard.service';
 
 const routes: Routes = [
+  { path: "" , redirectTo: "list" , pathMatch: "full" },
   { path: "list" , component: ProductListComponent , canActivate: [AuthguardService] },
   { path: "create" , component: AddProductComponent , canActivate: [AuthguardService] },
-  { path: "edit/:id" , component: AddProductComponent , canActivate: [AuthguardService] }
+  { path: "edit/:id" , component: AddProductComponent , canActivate: [AuthguardService] } 
 ];
 
 @NgModule({

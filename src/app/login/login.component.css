@@ -1,7 +1,7 @@
 #mainContainer {
     min-height: 100vh;
     min-width: 100vw;
-    background-image: url("../../assets/MBL_Office_Faded.jpg");
+    background-image: url("../../assets/images/MBL_Office_Faded.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

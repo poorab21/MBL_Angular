@@ -63,7 +63,7 @@ export class AddProductComponent {
       const prodId = this.route.snapshot.params['id'];
       this.mode = 'edit';
 
-      this.productService.getProduct(prodId).subscribe((data) => {
+      this.productService.getProduct(prodId).subscribe((data: any) => {
         this.form.patchValue({
           name: data.name ,
           price: data.price ,
