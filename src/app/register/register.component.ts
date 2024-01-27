@@ -3,6 +3,7 @@ import { FormBuilder , Validators } from '@angular/forms';
 import { UserService } from '../../assets/Services/user.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Regex } from '../../assets/regex/regex';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,6 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class RegisterComponent {
   form: any;
-  passwordRegex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
   usernameFocused: boolean;
   emailFocused: boolean;
   phoneFocused: boolean;
@@ -49,7 +49,7 @@ export class RegisterComponent {
         "",
         [
           Validators.required,
-          Validators.pattern(this.passwordRegex)
+          Validators.pattern(Regex.passwordRegex)
         ]
       ],
       confirmPassword: [

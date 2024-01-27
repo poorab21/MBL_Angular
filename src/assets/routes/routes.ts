@@ -1,4 +1,5 @@
 export const routes = {
     registration: "registration",
-    product: "product"
+    product: "product",
+    messages: "messages"
 }

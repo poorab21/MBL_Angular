@@ -1,0 +1,31 @@
+.txt {
+    color: black;
+    font-weight: bold;
+    font-family: cursive;
+    color: plum;
+}
+
+#container {
+    padding: 1%;
+    background-color: purple;
+    min-width: 40vw;
+}
+
+#submitBtn {
+    background-color: plum;
+    color: purple;
+    margin-bottom: 1%;
+}
+
+#submitBtn:hover {
+    background-color: black;
+    color: white
+}
+
+.errortxt {
+    color: red;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 1%;
+}

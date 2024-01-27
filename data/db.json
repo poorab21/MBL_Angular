@@ -107,5 +107,31 @@
       "details": "Exclusive MBL Card for Top level Executives of Meezan Bank",
       "id": 2
     }
+  ],
+  "messages": [
+    {
+      "username": "poorabgangwani",
+      "email": "poorabgangwani19@gmail.com",
+      "message": "Hello There",
+      "id": 1
+    },
+    {
+      "username": "poorabgangwani",
+      "email": "poorabgangwani19@gmail.com",
+      "message": "What now",
+      "id": 2
+    },
+    {
+      "username": "poorabgangwani",
+      "email": "poorabgangwani19@gmail.com",
+      "message": "Nothing",
+      "id": 3
+    },
+    {
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "message": "wqdfef",
+      "id": 4
+    }
   ]
 }

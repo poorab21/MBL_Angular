@@ -7,6 +7,7 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { units } from '../../../assets/data/productUnits';
 import { constants } from '../../../assets/constant/constant';
+import { Regex } from '../../../assets/regex/regex';
 
 @Component({
   selector: 'app-add-product',
@@ -48,7 +49,7 @@ export class AddProductComponent {
         "" ,
         [
           Validators.required ,
-          Validators.pattern("^(.|\n)*[^\n]+(.|\n)*$")
+          Validators.pattern(Regex.textBoxRegex)
         ]
       ]
     });
