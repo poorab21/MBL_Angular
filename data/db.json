@@ -90,22 +90,36 @@
       "email": "Rubin@gmail.com",
       "password": "Rubin@123",
       "id": 13
+    },
+    {
+      "username": "louis litt",
+      "phone": "01213123123",
+      "email": "louis@gmail.com",
+      "password": "Litt@123",
+      "id": 14
     }
   ],
   "product": [
-    {
-      "name": "test",
-      "price": 12223,
-      "unit": "Kilogram",
-      "details": "testing",
-      "id": 1
-    },
     {
       "name": "MBL Executive Card",
       "price": 15000,
       "unit": "Gram",
       "details": "Exclusive MBL Card for Top level Executives of Meezan Bank",
       "id": 2
+    },
+    {
+      "name": "Meezan Pension Card",
+      "price": 12050,
+      "unit": "Litre",
+      "details": "MBL Card for Retired MBL Employees",
+      "id": 3
+    },
+    {
+      "name": "Meezan Restaurant Card",
+      "price": 1500,
+      "unit": "Kilogram",
+      "details": "Meezan card to avail discount on every restaurant in pakistan",
+      "id": 4
     }
   ],
   "messages": [
@@ -132,6 +146,30 @@
       "email": "abc@gmail.com",
       "message": "wqdfef",
       "id": 4
+    },
+    {
+      "username": "Ahmed Ali",
+      "email": "Ahmed@gmail.com",
+      "message": "kdjfIAJFIjd",
+      "id": 5
+    },
+    {
+      "username": "poorabgangwani",
+      "email": "poorabgangwani19@gmail.com",
+      "message": "Hello There",
+      "id": 6
+    },
+    {
+      "username": "louis litt",
+      "email": "louis@gmail.com",
+      "message": "You just got litt up",
+      "id": 7
+    },
+    {
+      "username": "poorabgangwani",
+      "email": "poorabgangwani19@gmail.com",
+      "message": "acniosjc",
+      "id": 8
     }
   ]
 }

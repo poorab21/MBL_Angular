@@ -5,20 +5,8 @@
         <div class="container-fluid d-flex flex-md-row flex-column-reverse">
             <form [formGroup]="form" class="form" style="flex: 3;" (ngSubmit)="onMessageSubmit()">
                 <div class="form-group">
-                    <label for="username" class="txt" style="font-size: 1.2rem;">Enter Username</label>
-                    <input id="username" formControlName="username" (focus)="usernameFocused = true" (blur)="usernameFocused = false" name="username" type="text" class="form-control" />
-                    <p class="errortxt" *ngIf="Username.errors?.required && usernameFocused">Username must be specified</p>
-                </div>
-                <div class="form-group">
-                    <label for="email" class="txt" style="font-size: 1.2rem;">Enter Email</label>
-                    <input id="email" formControlName="email" (focus)="emailFocused = true" (blur)="emailFocused = false" name="email" type="email" class="form-control" />
-                    <p class="errortxt" *ngIf="Email.errors?.email && emailFocused">Invalid email format</p>
-                    <p class="errortxt" *ngIf="Email.errors?.required && emailFocused">Email must be specified</p>
-                </div>
-
-                <div class="form-group">
                     <label for="message" class="txt" style="font-size: 1.2rem;">Enter Message</label>
-                    <textarea id="message" formControlName="message" (focus)="messageFocused = true" (blur)="messageFocused = false" name="message" class="form-control" rows="5" cols="20"></textarea>
+                    <textarea id="message" formControlName="message" (focus)="messageFocused = true" (blur)="messageFocused = false" name="message" class="form-control inputTxt" rows="5" cols="20"></textarea>
                     <p class="errortxt" *ngIf="messageFocused && (Message.errors?.required || Message.errors?.pattern)">Message cannot be empty</p>
                 </div>
 

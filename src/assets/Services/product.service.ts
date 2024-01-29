@@ -1,35 +1,39 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../environment/environment';
 import { routes } from '../routes/routes';
 import { product } from '../interfaces/product';
+import { APP_SERVICE_CONFIG } from '../AppConfig/appconfig.service';
+import { ApiConfig } from '../interfaces/appconfig.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  environment: any;
 
-  constructor( private http: HttpClient ) {}
+  constructor(@Inject(APP_SERVICE_CONFIG) environment: ApiConfig , private http: HttpClient ) {
+    this.environment = environment;
+  }
 
   getProducts() {
-    return this.http.get(`${environment.baseUrl}${routes.product}`);
+    return this.http.get(`${this.environment.baseUrl}${routes.product}`);
   }
 
   addProduct(productDetails: product) {
-    return this.http.post<product>(`${environment.baseUrl}${routes.product}`,productDetails);
+    return this.http.post<product>(`${this.environment.baseUrl}${routes.product}`,productDetails);
   }
 
   deleteProduct( id: number ) {
-    return this.http.delete(`${environment.baseUrl}${routes.product}/${id}`);
+    return this.http.delete(`${this.environment.baseUrl}${routes.product}/${id}`);
   }
 
   editProduct( id: number , product: product ) {
-    return this.http.put(`${environment.baseUrl}${routes.product}/${id}`,{
+    return this.http.put(`${this.environment.baseUrl}${routes.product}/${id}`,{
       ...product
     });
   }
 
   getProduct( id: number ) {
-    return this.http.get(`${environment.baseUrl}${routes.product}/${id}`);
+    return this.http.get(`${this.environment.baseUrl}${routes.product}/${id}`);
   }
 }

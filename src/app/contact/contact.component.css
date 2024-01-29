@@ -11,6 +11,13 @@
     min-width: 40vw;
 }
 
+.inputTxt {
+    font-size: 1.2rem;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+}
+
 #submitBtn {
     background-color: plum;
     color: purple;

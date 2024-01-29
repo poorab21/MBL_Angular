@@ -26,6 +26,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { ProductsModule } from './products/products.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { APP_CONFIG, APP_SERVICE_CONFIG } from '../assets/AppConfig/appconfig.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
       positionClass :'toast-bottom-right'
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_SERVICE_CONFIG ,
+      useValue: APP_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
