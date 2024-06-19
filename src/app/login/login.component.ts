@@ -31,9 +31,11 @@ export class LoginComponent {
       );
       
       if(user) {
-        const token = btoa( JSON.stringify({ username : user.username , email : user.email , expiryDate: moment().add(1,"day") }) );
+        const token = btoa( JSON.stringify({ username : user.username , email : user.email , expiryDate: moment().add(10,"seconds") }) );
         
         sessionStorage.setItem("token",token);
+        localStorage.setItem("token",token);
+        document.cookie = "hello=there; path=/;";
         form.reset("");
         this.toastr.success(constants.toastrLoginMsg);
         this.router.navigateByUrl("/onboarding");

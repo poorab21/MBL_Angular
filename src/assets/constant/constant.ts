@@ -6,6 +6,6 @@ export const constants = {
     toastrSessionEndMsg: "Your session has expired" ,
     toastrAddProductMsg: "Product Successfully added" ,
     toastrEditProductMsg: "Product Successfully Updated" ,
-    toastrRemoveProductMsg: "Product successfully deleted"
-
+    toastrRemoveProductMsg: "Product successfully deleted" ,
+    toastrUnauthorizedRequestMsg: "Unauthorized Request Attempt"
 }

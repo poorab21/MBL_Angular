@@ -8,6 +8,7 @@ import { Validators } from '@angular/forms';
 import { units } from '../../../assets/data/productUnits';
 import { constants } from '../../../assets/constant/constant';
 import { Regex } from '../../../assets/regex/regex';
+import { AuthService } from '../../../assets/Services/auth.service';
 
 @Component({
   selector: 'app-add-product',
@@ -22,7 +23,14 @@ export class AddProductComponent {
   productUnits: any;
   prodDetailsFocused: boolean;
   
-  constructor(private toastrService: ToastrService, private route: ActivatedRoute , private router: Router , private productService: ProductService , private fb: FormBuilder ) {
+  constructor(
+    private toastrService: ToastrService, 
+    private route: ActivatedRoute , 
+    private router: Router , 
+    private productService: ProductService , 
+    private fb: FormBuilder ,
+    private authService: AuthService
+  ) {
     
     this.form = fb.group({
       name: [
@@ -60,7 +68,7 @@ export class AddProductComponent {
     this.prodDetailsFocused = false;
     this.mode = 'create';
 
-    if(router.url.includes("edit")) {
+    if(router.url.includes("edit") && this.authService.hasValidToken()) {
       const prodId = this.route.snapshot.params['id'];
       this.mode = 'edit';
 
@@ -92,6 +100,12 @@ export class AddProductComponent {
   }
 
   onSubmit() {
+
+    if( !this.authService.hasValidToken() ) {
+
+      return;
+    }
+
     if( this.mode == 'create' ) {
       this.productService.addProduct(this.form.value).subscribe((success) => {
         console.log(success);

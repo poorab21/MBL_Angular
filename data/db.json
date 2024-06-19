@@ -97,6 +97,20 @@
       "email": "louis@gmail.com",
       "password": "Litt@123",
       "id": 14
+    },
+    {
+      "username": "teddy todd",
+      "phone": "09829138912",
+      "email": "Teddy@gmail.com",
+      "password": "Ted@1234",
+      "id": 15
+    },
+    {
+      "username": "poorab gangwani",
+      "phone": "01234267890",
+      "email": "poorabgangwani18@gmail.com",
+      "password": "Poorab@121",
+      "id": 16
     }
   ],
   "product": [
@@ -108,18 +122,18 @@
       "id": 2
     },
     {
-      "name": "Meezan Pension Card",
-      "price": 12050,
-      "unit": "Litre",
-      "details": "MBL Card for Retired MBL Employees",
-      "id": 3
-    },
-    {
       "name": "Meezan Restaurant Card",
       "price": 1500,
       "unit": "Kilogram",
       "details": "Meezan card to avail discount on every restaurant in pakistan",
       "id": 4
+    },
+    {
+      "name": "jsdhfui",
+      "price": 7623,
+      "unit": "Kilogram",
+      "details": "jdfh",
+      "id": 5
     }
   ],
   "messages": [
